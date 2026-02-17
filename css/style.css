@@ -661,8 +661,9 @@ main .sobre{
     font-family: 'Poppins', sans-serif;
     background-color: #222;
     border: 1px solid #333;
-    padding: 6px 20px;
+    padding: 6px -5px;
     color: #707070;
+    
 }
 
 .projects_models ul li.active {
@@ -722,6 +723,7 @@ main .sobre{
     .resume_generica .experience_content, .education_content{
         justify-self: center;
         grid-column: 1/-1;
+        
     }
 
     .resume_generica .education{
@@ -772,26 +774,30 @@ main .sobre{
 
     .section-div img {
         display: none;
+        
     }
     .section-div{
         background-image: url(../img/photo.png);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover;        
         
     }
 
     header .navegacao-primaria{
         display: none;
+        
     }
 
     header {
         justify-content: space-between;
         padding: 30px 70px;
+        
     }
 
     header i{
         color:#f7f7f7;
         font-size: 2rem;
+        
     }
 
     header .navegacao-primaria.ativado{
@@ -807,13 +813,16 @@ main .sobre{
         border-radius: 0 0 4px 4px;
         right: 20px;
         animation: upSection .8s ease-in-out forwards;
+      
     }
 
     .sobre img{
         grid-column: 1/-1;
         justify-self: center;
+        
     }
     .sobre_conteudo{
         grid-column: 1/-1;
+        
     }
 }
