@@ -768,61 +768,96 @@ main .sobre{
     }
 }
 
-
-
+/* Ajustes para Tablets e Celulares maiores */
 @media(max-width: 992px){
-
-    .section-div img {
-        display: none;
-        
-    }
-    .section-div{
-        background-image: url(../img/photo.png);
-        background-repeat: no-repeat;
-        background-size: cover;        
-        
-    }
-
-    header .navegacao-primaria{
-        display: none;
-        
-    }
-
+    /* Header e Menu */
     header {
         justify-content: space-between;
-        padding: 30px 70px;
-        
+        padding: 20px 30px; /* Reduzi um pouco o padding para não tomar tanto espaço */
     }
-
-    header i{
-        color:#f7f7f7;
+    header .navegacao-primaria {
+        display: none;
+    }
+    header i {
+        color: #f7f7f7;
         font-size: 2rem;
-        
+        cursor: pointer;
     }
-
-    header .navegacao-primaria.ativado{
-        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
+    header .navegacao-primaria.ativado {
+        background: linear-gradient(rgba(43, 42, 42, 0.9), rgba(46, 46, 46, 0.95)); /* Fundo mais escuro para ler bem o menu */
         position: absolute;
         display: grid;
         top: 80px;
         color: white;
-        z-index: 1;
+        z-index: 10; /* Aumentado para o menu não ficar atrás de outros elementos */
         padding: 30px;
         font-size: 1.3rem;
         font-weight: bold;
         border-radius: 0 0 4px 4px;
         right: 20px;
+        gap: 15px; /* Espaço entre os links do menu mobile */
         animation: upSection .8s ease-in-out forwards;
-      
     }
 
-    .sobre img{
-        grid-column: 1/-1;
-        justify-self: center;
-        
+    /* Hero Section (Seção inicial) */
+    .section-div {
+        background-image: url(../img/photo.png);
+        background-repeat: no-repeat;
+        background-size: cover;  
+        background-position: center; /* Centraliza a imagem de fundo */
+        grid-template-columns: 1fr; /* Força a ter apenas 1 coluna no mobile */
+        padding: 40px 20px;
+        text-align: center; /* Centraliza os textos */
     }
-    .sobre_conteudo{
-        grid-column: 1/-1;
-        
+    .section-div div {
+        margin-top: 40px;
+        justify-items: center; /* Centraliza o botão */
+    }
+    .section-div img {
+        display: none;
+    }
+
+    /* Ajusta a grade de projetos para 2 colunas */
+    .projects_storage ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+     /* Centraliza o botão "Baixe aqui o Pdf" no mobile */
+    .section-div div a {
+        justify-self: center;
+    }
+}
+
+/* Ajustes Específicos para Celulares (telas menores que 600px) */
+@media(max-width: 600px) {
+    /* Diminui os títulos para não quebrar layout */
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .sobre_titulo h1 {
+        font-size: 2rem;
+    }
+
+    /* Lista de Projetos para 1 coluna */
+    .projects_storage ul {
+        grid-template-columns: 1fr;
+    }
+
+    /* Permite que as abas de projetos quebrem linha se faltar espaço */
+    .projects_models ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    /* Ajusta os paddings para a tela do celular */
+    .services {
+        padding: 40px 20px;
+    }
+    .my_service {
+        padding: 20px 0;
+    }
+    
+    .my_service ul li {
+        width: 100%; /* Faz os cards de apps usarem 100% do espaço disponível */
     }
 }
