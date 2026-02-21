@@ -768,65 +768,6 @@ main .sobre{
     }
 }
 
-
-
-@media(max-width: 992px){
-
-    .section-div img {
-        display: none;
-        
-    }
-    .section-div{
-        background-image: url(../img/photo.png);
-        background-repeat: no-repeat;
-        background-size: cover;        
-        
-    }
-
-    header .navegacao-primaria{
-        display: none;
-        
-    }
-
-    header {
-        justify-content: space-between;
-        padding: 30px 70px;
-        
-    }
-
-    header i{
-        color:#f7f7f7;
-        font-size: 2rem;
-        
-    }
-
-    header .navegacao-primaria.ativado{
-        background: linear-gradient(rgba(43, 42, 42, 0.176), rgba(46, 46, 46, 0.724));
-        position: absolute;
-        display: grid;
-        top: 80px;
-        color: white;
-        z-index: 1;
-        padding: 30px;
-        font-size: 1.3rem;
-        font-weight: bold;
-        border-radius: 0 0 4px 4px;
-        right: 20px;
-        animation: upSection .8s ease-in-out forwards;
-      
-    }
-
-    .sobre img{
-        grid-column: 1/-1;
-        justify-self: center;
-        
-    }
-    .sobre_conteudo{
-        grid-column: 1/-1;
-        
-    }
-}
-
 /* Ajustes para Tablets e Celulares maiores */
 @media(max-width: 992px){
     /* Header e Menu */
@@ -879,6 +820,11 @@ main .sobre{
     /* Ajusta a grade de projetos para 2 colunas */
     .projects_storage ul {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+     /* Centraliza o botão "Baixe aqui o Pdf" no mobile */
+    .section-div div a {
+        justify-self: center;
     }
 }
 
